@@ -1,0 +1,17 @@
+menu "TDPS board configuration"
+
+config TDPS_I2C_SDA
+    int "VL53L0X SDA GPIO (-1 disables the example)"
+    range -1 48
+    default 21
+
+config TDPS_I2C_SCL
+    int "VL53L0X SCL GPIO (-1 disables the example)"
+    range -1 48
+    default -1 if IDF_TARGET_ESP32S3
+    default 22
+    help
+        Select the GPIO connected on your board. ESP32-S3 has no GPIO22.
+        The distance reader is an example, not a complete VL53L0X driver.
+
+endmenu

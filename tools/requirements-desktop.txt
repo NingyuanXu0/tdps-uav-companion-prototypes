@@ -1,0 +1,6 @@
+# Optional dependencies for archived desktop GUI, plotting and serial tools.
+# Not required by all snapshots; versions were not validated in this publication.
+numpy
+matplotlib
+pyserial
+mpremote
